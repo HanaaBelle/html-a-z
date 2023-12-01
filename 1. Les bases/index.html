@@ -1,0 +1,93 @@
+<!-- Elément auto-fermant (vide ou orphelin) sans contenu à l'intérieur qui définit que c'est un fichier HTML -->   
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            HTML de Base
+        </title>
+    </head>
+    <body>
+        
+        <!-- Les éléments recevront du styles prédéfinit par chaque navigateur s'ils ne sont pas stylisés par du "CSS" -->
+
+        <!-- Les headings du <h1> à <h6> éléments classiques (fermants) qui cherche à sectionner le texte et on respecte l'ordre des titres : <h1> <h2> ... <5> <h6> -->
+        <!-- Définit un titre niveau 1 (un seul par page : c'est une régle mais ce n'est pas obligatoire) avec du contenu à l'intérieur -->
+        <h1>
+            Premier Titre    
+        </h1>
+
+        <!-- Elément auto-fermant pour permettre un retour à la ligne qui ne doit pas être utilisé pour du style -->
+        <br>
+
+        <!-- Elément auto-fermant pour afficher les images -->
+        <img src="" alt="">
+
+        <!-- Elément auto-fermant pour rentrer des données dans un formulaire avec un attribut "type" et la valeur "text" pour entrer du texte -->
+        <input type="text">
+
+        <!-- Eléments de type "bloc" qui ont des marges et ils prennent tout l'espace de gauche à droite et les éléments qui se suivent, ils passent tous à la ligne -->
+        <!-- Elément classique (fermant) c'est la brique de base pour construire le web (bloc) idéal pour tous les éléments qui n'ont aucun sens et pas d'aspect sémantique ça permet de mettre en place du contenu et de le styliser la balise n'est pas faite pour y ajouter du texte mais pour mettre d'autres éléments comme <p> ou <h2> <h3> etc... -->
+        <div>
+             <!-- Elément classique (fermant) fait pour y mettre du texte mais on ne peut pas y mettre une balise <div> suivant des régles d'imbrication -->
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem suscipit dolorum eius maiores aliquam quaerat, magnam cumque minus a, deleniti voluptate! Maiores praesentium perferendis ducimus vel beatae reiciendis, quae culpa.
+            </p>
+
+            <!-- Erreur ! Attention aux imbrications on ne met pas de <div> à l'intérieur de <p> -->
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, vitae velit vel enim minima nemo maxime molestias quo quas possimus, earum impedit. Quibusdam corporis saepe quis, quia ipsam ex ab.
+   
+                <!-- Eléments de type "inline" n'ont pas de marge et ne prènnent pas tous l'espace et si on les enchaine ils prènnent la même ligne, ils stylisent modifient ou changent un morceau ou un mot dans un paragraphe -->
+                <span>
+                    Coucou
+                </span>
+                
+            </p>
+
+            <!-- Les listes "<ol> : ordonnées" et "<ul> : non ordonnées" ça contient des paddings et des marges -->
+            <ul>
+                <!-- Les éléments d'une liste -->
+                <li> Elément 1 
+                     <!-- On peut imbriquer des listes <ul> dans des <ul> -->
+                        <ul>  
+                            <li> Elément 1.1 </li>
+                            <li> Elément 1.2 </li>
+                        </ul>
+                </li>
+                <li> Elément 2 </li>
+                <li> Elément 3 
+                    <!-- On peut imbriquer des listes <ol> dans des <ul> -->
+                    <ol>  
+                        <li> Elément 3.1 </li>
+                        <li> Elément 3.2 </li>
+                        <li> Elément 3.3 </li>
+                    </ol>
+                </li>
+            </ul>
+
+            <ol>
+                <!-- On peut imbriquer les listes -->
+                <li> Elément A 
+                    <!-- On peut imbriquer les listes <ul> dans du <ol> -->
+                    <ul> 
+                        <li> Elément a </li>
+                        <li> Elément aa </li>
+                        <li> Elément aaa </li>
+                    </ul>
+                </li>
+                
+                <li> Elément B 
+                     <!-- On peut imbriquer des listes <ol> dans des <ol> -->
+                        <ol>  
+                            <li> Elément b </li>
+                            <li> Elément bb </li>
+                        </ol>
+                </li>
+                
+                <li> Elément C </li>
+            </ol>
+
+        </div>
+
+    </body>
+</html>
