@@ -19,10 +19,42 @@
     </head>
     <body>
         
-        <!-- Les IDs sont uniques dans une page HTML, idéales pour la navigation avec les links, utilisées dans JS avec le "getElementByID" -->
+        <!-- Les IDs sont uniques dans une page HTML (mettre un seul ID par élément ex: id="title-1"), idéales pour la navigation avec les links, utilisées dans JS avec le "getElementByID" -->
         <!-- Les classes peuvent être répétées dans une page HTML, utilisées dans JS avec le "querySelector" -->
         <!-- Ses attributs servent à faciliter la séléction en CSS et JS dans une page HTML -->
         <h1 id="title-1" class="title-1 main-title page-title"> Titre de niveau 1 </h1>
      
+        <!-- Les liens sont des éléments inligne qui font référence à des chemins absoluts ou relatifs -->
+
+        <!-- 1. Absolut link vers une page externe : mettre le chemin en entier (une adresse complète ou une URL ou un chemin vers un disque) -->
+        <!-- "Google" ici est l'ancre du lien il fait référence à l'endroit où on veut aller (ça doit être explicite et compréhensible avec des mots clés et permètre une meilleure accessibilité ) -->
+        <a href="https://google.com">Google</a>
+
+        <!-- 2. Relatif link avec un chemin relatif à son dossier vers un endroit de la même page en cours (pour le maillage interne) -->
+        <a href="#title-2">Aller au second titre</a>
+        <a href="#title-3">Aller au troisième titre</a>
+
+        <!-- 3. Relatif link avec un chemin relatif à son dossier vers une autre page de notre site  (pour le maillage interne) -->
+        <!--  Ecrire <a href="./contact.html">Allez à la page Contactez-Nous</a> ou href="contact.html" c'est la même chose (ça fait référence au même dossier) -->
+        <a href="contact.html">Allez à la page Contactez-Nous</a>
+
+        <!-- Mais si je mets href="/contact.html" ("chemin absolu racine-relative" ou "chemin absolu à partir de la racine") et ça me mettera une erreur pcq le fichier n'existe pas dans le dossier "HTML-A_Z" mais dans le dossier courant -->
+        <a href="/contact.html">Allez à la page Contact</a>
+
+        <!-- Pour aller vers un fichier dans un dossier enfant du dossier courant, faire : href="/Important elements, attributs, medias /blog/article.html" ou href="./blog/article.html" ou plus simple : -->
+        <a href="blog/article.html">Lien vers mon Article</a>
+
+        <!-- 4. Relatif link avec un chemin relatif à son dossier vers un endroit dans une autre page de notre site (pour le maillage interne) -->
+        <a href="contact.html#title-inscription">Inscrivez-vous</a>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab sapiente eos quisquam dolore maiores exercitationem architecto numquam quas odit harum! Quas ab architecto dolore iste quam doloremque fugit nobis inventore. Doloribus quibusdam sunt rerum perferendis quis excepturi tenetur? Exercitationem dolore enim officia debitis vel omnis aliquam officiis qui aut quis quidem maxime in ducimus quisquam porro at, dignissimos laudantium illum ab beatae dolorem dolorum. Modi magni deleniti veniam ut fugiat nobis consectetur error ea temporibus, voluptatibus velit adipisci debitis facere dolorem repellendus eveniet a esse unde perferendis, illum blanditiis saepe, consequatur neque voluptate. Voluptatibus quaerat mollitia reprehenderit labore voluptas, debitis inventore cum recusandae veniam ipsam alias similique pariatur repudiandae fuga neque! Tenetur, recusandae, dicta dolor vitae itaque sint harum explicabo atque repudiandae nemo earum dolores ipsa unde sequi delectus, quisquam sapiente doloribus. Nisi nihil commodi reprehenderit! Ratione asperiores voluptatibus nemo voluptas perspiciatis dolorum a aliquid et atque. Cum amet assumenda perferendis quibusdam nihil sunt repellendus ipsam. Quaerat laborum aspernatur pariatur quisquam incidunt numquam. Incidunt animi adipisci placeat. Commodi explicabo omnis, maiores, odit vitae reiciendis veritatis ea esse sit magnam quibusdam ut laborum placeat maxime nobis quasi molestias aut cupiditate temporibus! Non pariatur corporis officiis necessitatibus eum, ea dolorem ipsam at explicabo quis esse aperiam id reprehenderit magni distinctio vitae, saepe quisquam debitis omnis eius ipsum ratione nesciunt? At omnis non libero officiis molestias distinctio obcaecati possimus vel similique voluptatem quidem nobis eius illum, ducimus voluptas adipisci enim saepe esse impedit odio sint vitae eveniet beatae numquam? Quae dolore nam numquam ipsum quibusdam repudiandae, quasi ipsa deleniti voluptatibus nisi autem, fugit dolorem maiores, fuga sequi esse porro laboriosam fugiat quaerat soluta doloremque sit! Qui sed doloremque sunt iusto exercitationem architecto consequuntur ex voluptatibus error deleniti consectetur quae ea consequatur et minima asperiores voluptas neque, laboriosam perspiciatis nisi molestiae fuga ipsum velit expedita. Sint adipisci, harum provident dolore fugit minima nemo temporibus impedit! Nesciunt labore odit cum itaque dicta ad ex earum quibusdam commodi, illum totam. Velit dolorem odio deserunt, laboriosam soluta expedita cupiditate laudantium nihil deleniti, vero placeat fuga quam. A, sit? Eius impedit maiores eum voluptates dolore suscipit nam assumenda ducimus repellendus voluptatem! Natus, explicabo quas minima non iste nam modi placeat ipsum deserunt ea quaerat eligendi architecto eveniet inventore delectus quidem. Voluptatibus, excepturi ea. Deleniti, repellat. Accusamus aut repellat, debitis nulla commodi labore mollitia similique fuga facere adipisci eaque sed vitae et est molestias a, officiis expedita corporis, quae dolorem nobis sapiente. Animi omnis aperiam quod placeat neque deleniti, fuga doloremque voluptatibus magnam, adipisci, inventore voluptas iure error quae dolorem. Dolorum, optio adipisci. Qui neque molestias labore a ex iusto nobis, repellat atque eum dolores odit blanditiis, similique minima veniam quasi autem architecto, quo incidunt et. Dicta reprehenderit soluta voluptate deleniti vero quod exercitationem neque fugiat blanditiis, ut expedita placeat minus veritatis quia molestias eligendi corrupti quas temporibus voluptatum sed aliquid aspernatur! Repellendus facilis, dolorem dicta reprehenderit natus qui fuga doloribus ratione adipisci! Exercitationem doloremque impedit veritatis, placeat, voluptate amet maxime eos minima natus in iure inventore. Rerum, repudiandae.</p>
+
+        <h2 id="title-2">Titre de niveau 2</h2>
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita quibusdam recusandae dolorum? Molestiae assumenda, perspiciatis dicta quibusdam repudiandae dolorum id necessitatibus nam, quaerat voluptatem deleniti alias non ea odit tenetur ipsa voluptatibus quo natus. Veniam porro accusantium ipsam impedit nesciunt alias adipisci ab quas unde omnis. Commodi cum hic laudantium aliquam. Cumque adipisci voluptates cum illo alias laborum itaque autem veritatis optio dolor debitis hic magni, nulla in mollitia corrupti tempore, facere aliquid impedit sint natus quibusdam exercitationem. Dicta tempore repudiandae impedit eum accusantium in libero ipsum eius dolores optio expedita voluptatum maxime quidem tempora, maiores laborum enim id nostrum adipisci aspernatur vitae consectetur! Necessitatibus aliquid rem totam. Quo eius illum ab in et ducimus, ea deserunt dicta nihil, voluptatum, impedit porro voluptate eaque cum? Fugiat eos tempore tempora vitae et. Soluta perferendis sint error dolore aliquam unde harum tempora dolorem eligendi hic in, assumenda distinctio a nisi cumque optio? Sit quis excepturi atque aperiam numquam ea corporis, dolor officiis. Libero, distinctio nulla! Hic iste voluptas nihil, ex quae eius, dolore, eaque quisquam voluptatem dolorem ipsa optio perspiciatis nesciunt tempora recusandae dolor quo esse! Nobis nihil voluptatem nesciunt delectus commodi! Reiciendis quas ex, non natus, repellat repellendus voluptatibus saepe et, delectus vero error! Quia reiciendis quos aut eos dolorem dignissimos nisi temporibus sapiente unde, ratione impedit vero facere quidem deleniti, voluptates accusantium illum voluptatum commodi corporis eius natus distinctio itaque! Aperiam adipisci explicabo perspiciatis possimus. Facilis doloribus ipsam aliquid quibusdam neque cum laudantium nisi architecto ex illum dolorum, vero omnis error velit quos. Nihil distinctio voluptates ipsum iusto accusantium, cum error perferendis facilis saepe? Labore nostrum eligendi at deserunt laborum aspernatur eveniet fuga quod omnis similique quae dicta tempora delectus sed molestiae praesentium aliquid, illo, beatae odio sequi. Animi architecto nam nostrum tempore dolore eligendi dolorem sed necessitatibus magnam velit.</p>
+
+        
+
+
     </body>
 </html>
