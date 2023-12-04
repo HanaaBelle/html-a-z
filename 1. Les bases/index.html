@@ -2,16 +2,30 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- Définir un titre qui apparaitra dans le champ de navigation -->
         <title>
             HTML de Base
         </title>
+
+        <!-- 1. Ajout du CSS dans le HTML -->
+        <style>
+            h1 {
+                background-color: aquamarine;
+            }
+        </style> 
+
+        <!-- 2. Ajout d'un link vers une feuille de style CSS for separation of concerne -->
+        <link rel="stylesheet" href="style.css">
+
     </head>
-    <body>
+
+     <!-- 3. Ajout de style CSS à l'intérieur de chaque élément -->    
+    <body style="background-color: azure;">
         
-        <!-- Les éléments recevront du styles prédéfinit par chaque navigateur s'ils ne sont pas stylisés par du "CSS" -->
+        <!-- Les éléments recevront du style prédéfinit par chaque navigateur s'ils n'ont de "CSS" -->
 
         <!-- Les headings du <h1> à <h6> éléments classiques (fermants) qui cherche à sectionner le texte et on respecte l'ordre des titres : <h1> <h2> ... <5> <h6> -->
-        <!-- Définit un titre niveau 1 (un seul par page : c'est une régle mais ce n'est pas obligatoire) avec du contenu à l'intérieur -->
+        <!-- Définir un titre niveau 1 (un seul par page : c'est une régle mais ce n'est pas obligatoire) avec du contenu à l'intérieur -->
         <h1>
             Premier Titre    
         </h1>
@@ -22,7 +36,7 @@
         <!-- Elément auto-fermant pour afficher les images -->
         <img src="" alt="">
 
-        <!-- Elément auto-fermant pour rentrer des données dans un formulaire avec un attribut "type" et la valeur "text" pour entrer du texte -->
+        <!-- Elément auto-fermant un champ pour rentrer des données dans un formulaire avec un attribut "type" et la valeur "text" pour entrer du texte -->
         <input type="text">
 
         <!-- Eléments de type "bloc" qui ont des marges et ils prennent tout l'espace de gauche à droite et les éléments qui se suivent, ils passent tous à la ligne -->
