@@ -6,17 +6,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Balise "Meta Title" est important dans les moteurs de recherche : accès humain, compréhensible, lié à l'image du site (marque), longueur affichée (55/66 caractères), 
-    mots clés vers le début (accessibilité, donne envie de cliquer), <title> différent par page, pas trop long/court, éviter keywords stuffing, pas de titre, 
-    pas de titres similaies sur beaucoup pages. Parfois google change le "title" (il peut remplacer le contenu du titre <h1> s'il le trouve plus adapté que 
-    le contenu du <title>) -->
-    <!-- Ici par exemple les mots clés : CSS - apprendre - styliser - pages web  -->
+    <!-- Balise "Meta Title" est important dans les moteurs de recherche : accès humain, compréhensible, lié à l'image du site (marque), longueur affichée (55/66 
+        caractères), mots clés vers le début (accessibilité, donne envie de cliquer), <title> différent par page, pas trop long/court, éviter keywords stuffing,
+        pas de titre, pas de titres similaies sur beaucoup pages. Parfois google change le "title" (il peut remplacer le contenu du titre <h1> s'il le trouve plus 
+        adapté que le contenu du <title>) par exemple ici les mots clés : CSS - apprendre - styliser - pages web  -->
     <title>CSS - Apprenez à styliser vos pages web</title>
+
+    <!-- Le link est utilisé  pour le stylesheets (feuilles de style) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Ajouter police d'écriture en dessous du style (fonts) à partir du lien "https://fonts.google.com/specimen/Hedvig+Letters+Serif" qu'on va appliquer à notre 
+        style-->
+    <!-- Les preconnects Facilitent le téléchargement du lien du font qui est sur le site googlefonts : https://fonts.google.com/specimen/Hedvig+Letters+Serif -->    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Pour le font on peut avoir aussi le poids (gras) du text (weight : 400;500;600.700;800;900) puis aller sur le CSS "style.css" et écrire le nom du font :
+        "font-family: Hedvig Letters Serif;" on peut aussi faire du font pairring (faire une pair de plusieurs font 2 à 3) -->
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Hedvig+Letters+Serif:opsz@12..24&family=Lobster+Two&display=swap" rel="stylesheet">
+
+    <!-- Ajouter une Favicon -->
+    <link rel="icon" href="https://">
+   
+
 </head> 
 <body>
     
+    <h1>Apprenez à styliser le web</h1>
+
     <!-- Avec un logiciel de lecture pour l'accessibilité il va lire en anglais puis arrivé à la partie "span" il lira le texte en français -->
-    <p class="paragraph_1"> I cooked an <span lang="fr"> omelette au fromage</span></div>
+    <p class="paragraph_1"> 
+        Hi! I cooked 👩🏻‍🍳 an <span lang="fr"> omelette 🍳 au fromage 🧀 </span> 
+    </p>
     
 </body>
 </html>

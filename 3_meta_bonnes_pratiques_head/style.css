@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(147, 91, 23);
+}
+
+h1{
+    color: rgb(228, 208, 180);
+    font-size: 50px;
+    font-family: Hedvig Letters Serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+p {
+    color: #ffffff;
+    font-size: 25px;
+}
+
