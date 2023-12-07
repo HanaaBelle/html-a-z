@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Découverte des formulaires</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Dans le web il y a la partie frontend et la partie backend et pour un formulaire c'est pareil (côté interface et côté serveur). 
+        L'interface est composée de types d'attributs : "labels" bouts de texte liés aux inputs (si on clique sur le label ça me met le 
+        focus sur le input), "inputs" c'est l'entrée de données (text, number, date, email...), "buttons de submit" qui vont envoyer les 
+        données vers un serveur où les données vont être traitées, de la possibilité de faire de la validation des données ou pas côté 
+        front ou pas...etc. 
+        Pour le moment les formulaires ne vont pas fonctionner pour une raison (separation of concerne) :
+        séparation entre structure (HTML), style (CSS), fonctionnalités (JS), partie interface et expérience utilisateur (UI, frontend),
+        partie gestion des données et la sécurité (backend).
+        Mais c'est trèès possible de créer des formulaires dont aura besoin seulement du front et pas besoin du côté back et même la 
+        validation (fait gagner énormément de temps et améliore l'expérience utilisateur) et les erreurs lors de la validation des 
+        données entrées (elles sont gérées sur la partie front au lieu de perdre le temps de réponse lors de l'analyse de la partie back) 
+        il y a la partie front et back avec des animations ou des indications et bien sûr une validation côté serveur (backend) -->
+
+    <!-- Création du formulaire -->
+    <form action="" method="post">
+
+        <!-- Mettre un input même si ce n'est pas obligatoire c'est assez courrant ! et ajouter aussi un label pour décrire notre input 
+            ces éléments sont de type inline (se mettent les uns à coté des autres) -->
+
+        <!-- Pour que le "input" soit lié au "label" et que lorsqu'on clique sur un label il met le focus sur un input il faut que 
+            l'attribut "for" (for="name") de "label" ayant un valeur comme par exemple "name" doit matcher avec la même valeur de l'id 
+            (id="name") dans le input en question -->
+        <label for="name">Votre nom</label>
+
+        <!-- On peut aussi ajouter l'attribut name et lorsque ces données vont être reçues par le serveur elles vont être labelisées 
+            et donc ça sera la valeur de cet attribut "name" -->
+        <!-- On utilise le "<input type="text">" si le texte est court < 20 caractères et "<textarea name="message">" pour les messages 
+            et les textes plutôt longs -->
+        <input type="text" name="name" id="name" placeholder="Entrez votre nom">
+        <label for="age">Votre age</label>
+        <input type="number" name="age" id="age" placeholder="Entrez votre age">
+
+        <label for="email">Votre email</label>
+        <input type="email" name="email" id="email" placeholder="Entrez votre email"> 
+        <label for="password">Votre mot de passe</label>
+        <input type="password" name="password" id="password" placeholder="Entrez votre mot de passe"> 
+        <label for="telephone">Votre numéro de téléphone</label>
+        <input type="tel" name="telephone" id="telephone" placeholder="Entrez votre téléphone"> 
+        <label for="message">Votre message</label>
+        <!-- Pour les attributs et leurs valeurs "cols="30" rows="10"" on s'occupe dans le CSS -->
+        <textarea name="message" id="message" placeholder="Entrez un message"></textarea>
+
+        <!-- On utilise un buttom pour valider et "submit" il est lié au formulaire vu qu'il est à l'intérieur et cliquer dessu implique 
+            qu'il va envoyer quelque chose mais si on le fait sortir du formulaire même si on clique dessu il se passe rien donc qu'on a 
+            un bouton dans un formulaire ça sera un bouton d'envoi attention donc au type quand on a plusieurs boutons dans un formulaire -->
+        <button type="submit">Envoyer votre formulaire</button>
+        <button type="reset">Initialiser ou Annuler</button>
+        <button type="button">Ajouter</button>
+    </form>
+
+    <form action="" method="post">
+
+        <label for="">Cliquez ici pour</label>
+        <input type="submit" value="Envoyer"> 
+        <label for="">Cliquez ici pour</label>
+        <input type="button" value="Valider"> 
+        <label for="">Cliquez ici pour</label>
+        <input type="reset" value="Annuler"> 
+
+        <label for="">Choisissez une case</label> <br>
+        <input type="radio" name="" id=""> 
+        <input type="radio" name="" id=""> 
+        <input type="radio" name="" id=""> 
+        <label for="">Cocher une ou plusieurs cases</label> <br>
+        <input type="checkbox" name="" id=""> 
+        <input type="checkbox" name="" id=""> 
+        <input type="checkbox" name="" id=""> 
+        <input type="range" name="" id=""> 
+
+        <label for="">Choisissez une couleurs</label>
+        <input type="color" name="" id=""> 
+
+        <label for="">Choississer une date sur le calendrier</label>
+        <input type="date" name="" id=""> 
+        <label for="">Choississer une heure (heure et minutes) </label>
+        <input type="time" name="" id=""> 
+        <label for="">Ecrivez une date et une heure </label>
+        <input type="datetime" name="" id=""> 
+        <label for="">Choississer une date et une heure locale</label>
+        <input type="datetime-local" name="" id=""> 
+        <label for="">Entrez une semaine</label>
+        <input type="week" name="" id="">
+        <label for="">Entrez un mois</label>
+        <input type="month" name="" id=""> 
+
+        <label for="">Choisissez une image</label>
+        <input type="image" src="" alt="">
+        <input type="file" name="" id=""> 
+
+        <label for="">Recherche</label>
+        <input type="search" name="" id=""> 
+
+        <label for="">Entrez l'URL d'un site web</label>
+        <input type="url" name="" id=""> 
+
+        <label for="">Cet élément est caché </label>
+        <input type="hidden" name=""> 
+
+    </form>
+
+</body>
+
+</html>

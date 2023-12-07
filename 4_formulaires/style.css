@@ -1,0 +1,29 @@
+body {
+    background-color:wheat;
+    margin: 30px;
+}
+
+
+form {
+    background: cadetblue; /* Mettre une couleur */ 
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5); /* Mettre ombre sur x = 0, y = 3px, le flou ou l'opacité = 5px et la couleur Noire */
+    padding: 25px; /* Pour faire respirer un design rien ne vaut un padding (remplissage) de 25px */
+    margin: 25px auto 0; /* Pour le margin (les marges) : 25px (en haut), auto (à gauche et à droite ça a rajouté une marge automatique qui centre le formulaire 
+                            qui est un élément block) et 0px en bas */
+    max-width: 300px; /* Pour une largeur maximum il prendre 400px et puisqu'il y a le padding ce qui fait 400px + le padding (25px) = 450px.
+                         Comme le formulaire est un élément block il prend tout l'espace de base mais là on lui dit de prendre que 400px et ça se réduit 
+                         automatiquement */
+    border-radius: 15px; /* Pour arrondir les bords de 15px*/ 
+}        
+
+/* Mettre les inputs et les textarea en */ 
+input, textarea, button {
+    display: block; /* Un "diplay block" pour que les éléments soient positionner les uns sur les autres */
+    margin-bottom: 20px; /* Une marge en bas de 20px */
+    width: 100%; /* Une largeur de chaque élément de 100% */
+    border-radius: 10px; /* Pour arrondir les bords de 10px*/ 
+}
+
+textarea {
+    min-height: 100px; /* Pour une hauteur minimum de 100px */
+}
