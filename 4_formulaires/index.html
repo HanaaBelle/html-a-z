@@ -9,56 +9,22 @@
     <title>Découverte des formulaires</title>
     <link rel="stylesheet" href="style.css">
 
+    <!-- Pour la validation on peut ajouter du style -->
+    <style>
+        /* ici ça signifie que si l'input est bien rempli lors de l'envoie et donc la couleur de la bordure devient solide et vert */
+        input:valid {
+            border: 2px solid rgb(27, 133, 27);
+        }
+
+        /* ici ça signifie que si l'input est vide lors de l'envoie la couleur et dons la bordure devient solide et rouge */
+        input:invalid {
+            border: 2px solid red;
+        }
+    </style>
+
 </head>
 
 <body>
-
-    <!-- Le "select" est plus utilisé que la "datalist" (qui est là depuis moins longtemps)-->
-
-    <!-- Ajout de l'élément "select", on ajoute toujours un élément "label" -->
-    <label for="legumes">Choisissez votre légume préféré</label>
-
-    <!-- Ici on va lié le "label" au "select" grâce au "for" du "label" et à l'"id" au "select" et on met name="légume" sans "s" et à l'intérieur de l'élément 
-        "select" on va mettre des éléments "option" -->
-    <select name="legume" id="legumes">
-        <!-- Généralement on laisse le 1er élément "option" vide -->
-        <option value="">Liste des légumes</option>
-        <!-- Puis on met les options avec leurs "value" -->
-        <option value="tomate">Tomate</option>
-        <option value="carotte">Carotte</option>
-        <option value="laitue">Laitue</option>
-        <option value="betrave">Betrave</option>
-        <option value="concombre">Concombre</option>
-        <option value="pomme-de-terre">Pomme de terre</option>
-        <option value="oignon">Oignon</option>
-        <option value="mache">Mâche</option>
-        <option value="roquette">Roquette</option>
-      
-    </select>
-
-    <!-- Ajout d'une liste qu'on va filtrer avec l'élément "datalist" (filtrable), on ajoute toujours un élément "label". 
-        Ce n'est pas très utilisée mais ça pourrait être utile si je fait une recherche ça permet de filtrer la liste-->
-    <label for="choix-langue">Choisissez la langue que vous voulez apprendre</label>
-    <!-- Puis on ajoute un élément "input" avec un attribut "list" ici la valeur est "langue" puis "l'id" je le lie avec le "for" du "label" puis le name="langue"
-         ce qui va servir à labéliser les données-->
-    <input list="langue" id="choix-langue" name="langue">
-    <!-- Ensuite on ajoute l'élément "datalist", on le lie avec "l'id" à l'attribut "list" de "l'input" cette fois et non celui du "for" du "label" puis j'ajoute 
-        les options -->
-    <datalist id="langue">
-         <!-- Ajout des options en commençant par le 1er élément option qui sera vide en suite les autres -->
-         <option value="">Liste des langues à apprendre</option>
-         <option value="arabe">Apprendre l'arabe 2h/jours</option>
-         <option value="francais">Apprendre le français 2h/jours</option>
-         <option value="anglais">Apprendre l'anglais 2h/jours</option>
-         <option value="espagnol">Apprendre l'espagnol 2h/jours</option>
-         <option value="italien">Apprendre l'italien 2h/jours</option>
-         <option value="allemand">Apprendre l'allemand 2h/jours</option>
-    </datalist>
-   
-
-
-
-     <!-- Ajout de l'élément "datalist" -->
 
     <!-- Dans le web il y a la partie frontend et la partie backend et pour un formulaire c'est pareil (côté interface et côté serveur). L'interface est composée 
         de types d'attributs : "labels" bouts de texte liés aux inputs (si on clique sur le label ça me met le focus sur le input), "inputs" c'est l'entrée de 
@@ -86,18 +52,32 @@
             cet attribut "name" -->
         <!-- On utilise le "<input type="text">" si le texte est court < 20 caractères et "<textarea name="message">" pour les messages et les textes plutôt 
             longs -->
-        <input type="text" name="name" id="name" placeholder="Entrez votre nom">
+        <!-- La validation des données et ses attributs côté front avec du HTML pur et du CSS -->
+        <!-- Ajout de l'attribut "required" ("recquis" donc on est obligé de le remplir) avant d'essayer de l'envoyer avec le bouton  -->
+        <!-- On peut aussi limiter les entrées avec minlength ou maxlength (maxlength="40" minlength="3") -->
+        <input required autocomplete="on" type="text" name="name" id="name" placeholder="Entrez votre nom" maxlength="40" minlength="3">
 
         <!-- Ajout d'un "number" -->
         <label for="age">Votre age</label>
-        <input type="number" name="age" id="age" placeholder="Entrez votre age">
+        <input required type="number" name="age" id="age" placeholder="Entrez votre age">
 
+        <!-- Notion de pattern  (par défaut) ici c'est proposer un choix entre par exemple (javascript - python - php) utilisé seulement dans des cas précis comme 
+        la gestion de REGEX mais ce qui est préférable dans la gestion des choix ou des option c'est d'utiliser des select ou des datalist avec option -->
+        <label for="dev-language">Choisissez un langage de programmation à apprendre (javascript - python - php)</label>
+        <input required pattern="javascript|python|php" type="text" name="dev-language" id="dev-language">
+
+        <!-- On a aussi l' "autocomplete" lorsqu'on clique sur un input, c'est ce qui est proposé dans un site lorsqu'on a déjà entré des données ici par exemple 
+            c'est en mode "off" c'est très utile car il ne proposera plus les données déjà entrées -->
         <label for="email">Votre email</label>
-        <input type="email" name="email" id="email" placeholder="Entrez votre email">
+        <input required autocomplete="off" type="email" name="email" id="email" placeholder="Entrez votre email">
+
+        <!-- On peut aussi limiter les entrées avec minlength ou maxlength (minlength="5") -->
         <label for="password">Votre mot de passe</label>
-        <input type="password" name="password" id="password" placeholder="Entrez votre mot de passe">
+        <input required type="password" name="password" id="password" placeholder="Entrez votre mot de passe" minlength="5">
+
         <label for="telephone">Votre numéro de téléphone</label>
         <input type="tel" name="telephone" id="telephone" placeholder="Entrez votre téléphone">
+
         <label for="message">Votre message</label>
         <!-- Pour les attributs et leurs valeurs "cols="30" rows="10"" on s'occupe dans le CSS -->
         <textarea name="message" id="message" placeholder="Entrez un message"></textarea>
@@ -118,8 +98,7 @@
         <!-- C'est avec JS qu'on peut manipuler cet élément, ajouter et afficher des valeurs en dessous-->
         <input type="range" name="" id="">
 
-        <!-- Malheureusement le calendrier est en anglais donc il faudra le refaire à la main et c'est un peu complexe à faire sinon si le site est en anglais 
-            c'est pratique de l'ulitilser tel qu'il est -->
+        <!-- Le input date et time et leurs dérivées -->
         <label for="">Choississer une date sur le calendrier</label>
         <input type="date" name="" id="">
         <label for="">Choississer une heure (heure et minutes) </label>
@@ -134,10 +113,13 @@
         <input type="month" name="" id="">
 
         <!-- Ne pas confondre les checkbox et radio -->
-        <!-- On peut les utiliser tous seuls car ils sont cochables et décochable -->
         <label for="">Cocher une ou plusieurs cases</label> <br>
-        <input type="checkbox" name="" id="">
-        <input type="checkbox" name="" id="">
+         <!-- On peut les utiliser tous seuls car ils sont cochables et décochable si on souhaite qu'elle soit à la base cochée on met "checked" -->
+        <input checked type="checkbox" name="" id="">
+        <!-- On peut aussi mettre un disabled (une case qu'on ne peut pas cochée) c'est utile dans certains cas où par exemple une personne n'a pas tous 
+             les droit on peut par exemple disabled certains "inputs" ou encore mettre en disabled tant que la personne est mineur n'aura pas accès à des choix 
+             mais si la personne est majeur elle pourra faire tel ou tel chose (choisir, cocher, mettre un input...etc) -->
+        <input disabled type="checkbox" name="" id="">
         <input type="checkbox" name="" id="">
 
         <!-- On les utilisent lorsqu'on a plusieurs choix mais une fois cochés ils ne sont plus décochables sauf si : on met la même valeur de l'attribut name à 
@@ -172,6 +154,49 @@
         <input type="hidden" name="">
 
     </form>
+
+    <!-- Le "select" est plus utilisé que la "datalist" (qui est là depuis moins longtemps)-->
+
+    <!-- Ajout de l'élément "select", on ajoute toujours un élément "label" -->
+    <label for="legumes">Choisissez votre légume préféré</label>
+
+    <!-- Ici on va lié le "label" au "select" grâce au "for" du "label" et à l'"id" au "select" et on met name="légume" sans "s" et à l'intérieur de l'élément 
+        "select" on va mettre des éléments "option" -->
+    <select name="legume" id="legumes">
+        <!-- Généralement on laisse le 1er élément "option" vide -->
+        <option value="">Liste des légumes</option>
+        <!-- Puis on met les options avec leurs "value" -->
+        <option value="tomate">Tomate</option>
+        <option value="carotte">Carotte</option>
+        <option value="laitue">Laitue</option>
+        <option value="betrave">Betrave</option>
+        <option value="concombre">Concombre</option>
+        <option value="pomme-de-terre">Pomme de terre</option>
+        <option value="oignon">Oignon</option>
+        <option value="mache">Mâche</option>
+        <option value="roquette">Roquette</option>
+
+    </select>
+
+    <!-- Ajout d'une liste qu'on va filtrer avec l'élément "datalist" (filtrable), on ajoute toujours un élément "label". 
+        Ce n'est pas très utilisée mais ça pourrait être utile si je fait une recherche ça permet de filtrer la liste-->
+    <label for="choix-langue">Choisissez la langue que vous voulez apprendre</label>
+    <!-- Puis on ajoute un élément "input" avec un attribut "list" ici la valeur est "langue" puis "l'id" je le lie avec le "for" du "label" puis le name="langue"
+         ce qui va servir à labéliser les données-->
+    <input list="langue" id="choix-langue" name="langue">
+    <!-- Ensuite on ajoute l'élément "datalist", on le lie avec "l'id" à l'attribut "list" de "l'input" cette fois et non celui du "for" du "label" puis j'ajoute 
+        les options -->
+    <!-- Ajout de l'élément "datalist" -->
+    <datalist id="langue">
+        <!-- Ajout des options en commençant par le 1er élément option qui sera vide en suite les autres -->
+        <option value="">Liste des langues à apprendre</option>
+        <option value="arabe">Apprendre l'arabe 2h/jours</option>
+        <option value="francais">Apprendre le français 2h/jours</option>
+        <option value="anglais">Apprendre l'anglais 2h/jours</option>
+        <option value="espagnol">Apprendre l'espagnol 2h/jours</option>
+        <option value="italien">Apprendre l'italien 2h/jours</option>
+        <option value="allemand">Apprendre l'allemand 2h/jours</option>
+    </datalist>
 
 </body>
 
