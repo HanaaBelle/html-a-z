@@ -3,9 +3,8 @@ body {
     margin: 30px;
 }
 
-
 form {
-    background: rgb(222, 161, 218); /* Mettre une couleur */ 
+    background: rgb(143, 218, 220); /* Mettre une couleur */ 
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5); /* Mettre ombre sur x = 0, y = 3px, le flou ou l'opacité = 5px et la couleur Noire */
     padding: 25px; /* Pour faire respirer un design rien ne vaut un padding (remplissage) de 25px */
     margin: 25px auto 0; /* Pour le margin (les marges) : 25px (en haut), auto (à gauche et à droite ça a rajouté une marge automatique qui centre le formulaire 

@@ -1,0 +1,40 @@
+body {
+    background: rgb(133, 181, 226);
+    margin: 30px;
+}
+
+form {
+    background: rgb(230, 196, 137);
+    max-width: 300px;
+    margin: 60px auto 0;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 7px rgb(81, 81, 81);
+}
+
+input, label, button {
+    display: block;
+}
+
+input, textarea, select {
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+input:valid {
+    border: 2px solid rgb(27, 152, 27);
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+button {
+    border-radius: 15px;
+}
+
