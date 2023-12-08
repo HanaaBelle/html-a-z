@@ -13,6 +13,53 @@
 
 <body>
 
+    <!-- Le "select" est plus utilisé que la "datalist" (qui est là depuis moins longtemps)-->
+
+    <!-- Ajout de l'élément "select", on ajoute toujours un élément "label" -->
+    <label for="legumes">Choisissez votre légume préféré</label>
+
+    <!-- Ici on va lié le "label" au "select" grâce au "for" du "label" et à l'"id" au "select" et on met name="légume" sans "s" et à l'intérieur de l'élément 
+        "select" on va mettre des éléments "option" -->
+    <select name="legume" id="legumes">
+        <!-- Généralement on laisse le 1er élément "option" vide -->
+        <option value="">Liste des légumes</option>
+        <!-- Puis on met les options avec leurs "value" -->
+        <option value="tomate">Tomate</option>
+        <option value="carotte">Carotte</option>
+        <option value="laitue">Laitue</option>
+        <option value="betrave">Betrave</option>
+        <option value="concombre">Concombre</option>
+        <option value="pomme-de-terre">Pomme de terre</option>
+        <option value="oignon">Oignon</option>
+        <option value="mache">Mâche</option>
+        <option value="roquette">Roquette</option>
+      
+    </select>
+
+    <!-- Ajout d'une liste qu'on va filtrer avec l'élément "datalist" (filtrable), on ajoute toujours un élément "label". 
+        Ce n'est pas très utilisée mais ça pourrait être utile si je fait une recherche ça permet de filtrer la liste-->
+    <label for="choix-langue">Choisissez la langue que vous voulez apprendre</label>
+    <!-- Puis on ajoute un élément "input" avec un attribut "list" ici la valeur est "langue" puis "l'id" je le lie avec le "for" du "label" puis le name="langue"
+         ce qui va servir à labéliser les données-->
+    <input list="langue" id="choix-langue" name="langue">
+    <!-- Ensuite on ajoute l'élément "datalist", on le lie avec "l'id" à l'attribut "list" de "l'input" cette fois et non celui du "for" du "label" puis j'ajoute 
+        les options -->
+    <datalist id="langue">
+         <!-- Ajout des options en commençant par le 1er élément option qui sera vide en suite les autres -->
+         <option value="">Liste des langues à apprendre</option>
+         <option value="arabe">Apprendre l'arabe 2h/jours</option>
+         <option value="francais">Apprendre le français 2h/jours</option>
+         <option value="anglais">Apprendre l'anglais 2h/jours</option>
+         <option value="espagnol">Apprendre l'espagnol 2h/jours</option>
+         <option value="italien">Apprendre l'italien 2h/jours</option>
+         <option value="allemand">Apprendre l'allemand 2h/jours</option>
+    </datalist>
+   
+
+
+
+     <!-- Ajout de l'élément "datalist" -->
+
     <!-- Dans le web il y a la partie frontend et la partie backend et pour un formulaire c'est pareil (côté interface et côté serveur). L'interface est composée 
         de types d'attributs : "labels" bouts de texte liés aux inputs (si on clique sur le label ça me met le focus sur le input), "inputs" c'est l'entrée de 
         données (text, number, date, email...), "buttons de submit" qui vont envoyer les données vers un serveur où les données vont être traitées, de la 
@@ -40,6 +87,8 @@
         <!-- On utilise le "<input type="text">" si le texte est court < 20 caractères et "<textarea name="message">" pour les messages et les textes plutôt 
             longs -->
         <input type="text" name="name" id="name" placeholder="Entrez votre nom">
+
+        <!-- Ajout d'un "number" -->
         <label for="age">Votre age</label>
         <input type="number" name="age" id="age" placeholder="Entrez votre age">
 
