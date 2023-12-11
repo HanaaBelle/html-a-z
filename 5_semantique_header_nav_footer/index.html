@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La sémantique</title>
+</head>
+
+<body>
+
+    <!-- La sémantique c'est l'art de donner des noms aux choses qui décrivent leurs emplacements et leurs fonctionnalités une significations du pourquoi elles sont
+    là. Les balises : <header>, <nav>, <main>, <aside>, <footer> pourraient être remplacées par des <div> et rempliraient leurs fonctionnalités même côté CSS très 
+    normalement sauf que pour l'expérience développeur pour s'y retrouver facielement et aussi pour certains outils d'accessibilités créer une sorte de carte pour 
+    mieux ségementer le site et créer un code plus propre et agréable à lire c'est préférable d'utiliser des éléments sémantiques même si ce n'est pas obligatoire 
+    pour éviter de créer un code de mauvaise qualité -->
+
+    <!-- La page d'accueil de "Youtube" n'a pas de <h1> et donc question d'accessibilité ce n'est pas "top" mais depuis quelques années en terme de "SEO" on peut se
+    passer d'un <h1> même si c'est mieux d'en avoir un pour avoir une bonne table des matières et d'accessibilité même si ce n'est pas obligatoire et donc pour 
+    certaines applications web (sites avec beaucoup de fonctionnalités qui ne vont pas avoir besoin de téléchargement créés avec des framworks web  : 
+    une application qui a plusieurs fonctionnalités qu'on aura pas besoin de télécharger) -->
+
+    <!-- Quans on a une <nav> complexe avec un logo par exemple et un bouton pour se conneceter et des liens pour ouvrir des fenêtres modales ou même des inputs et 
+        un <h1> le tout sera mit entre une <div> ça serait mieux de les mettre à l'intérieur d'un header et là ça sera une "Hero section" qui est une page d'accueil
+        avec parfois une grande image qui va parfois prendre toute la place avec un <h1> comme un lien ou un bouton au milieu et une navigation complexe en haut 
+        avec des liens au milieu et un bouton pour se connceter à droite et à gauche un logo et tout ceci ça pourrait être le <header> (se qui est en haut de la 
+        page et présente le site) donc dans une section hero on aura besoin de h1 -->
+    <header>
+        <!--  -->
+        <div>
+
+            <img src="" alt="">
+
+            <h1>Hello</h1>
+
+            <!-- Possibilité d'une navigation horizontale, verticale, breadcrame, pagination... etc si c'est une navigation de plusieurs liens mais si c'est un seul lien 
+                on ne et pas de <nav> -->
+            <nav>
+                <a href="services.html">Services</a>
+                <a href="tarifs.html">Tarifs</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <!-- Des boutons pour se connecter ou des liens qui s'ouvrent sur des fenêtres modales-ou est ce qu'on va sur une autre page -->
+            <button type="button">Se connecter</button>
+
+            <!-- On peut même avoir des inputs parfois -->
+            <input type="text" value="">
+
+        </div>
+
+    </header>
+
+
+    <main></main>
+    <aside></aside>
+
+    <!-- ça peut être un <footer> simple tout en bas du site  avec "Tout droits réservé" avec un lien qui entour le texte et qui mène vers une page qui va servir à 
+    présenter le créateur du site et quel service d'hébergement héberge le site et pour quelle entreprise ou service représente se site ...etc.  
+    Comme ça peut être un footer plus complexe. Bootstrap est un frameword CSS qui crée des site un peu plus facilement. Et donc pour un footer plus complexe on 
+    aura des liens vers des réseaux sociaux, une licence pour bootstrap -->
+    <footer>
+        <a href="mentions_legales.html">Tout droits réservé</a>
+    </footer>
+
+</body>
+
+</html>
