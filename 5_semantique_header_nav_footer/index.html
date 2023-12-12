@@ -31,7 +31,9 @@
 
             <img src="" alt="">
 
-            <h1>Hello</h1>
+            <!-- On veille toujours à respecter cette descente de heading et un titre par page même si en terme de SEO se n'est plus vraiment obligatoire on continue
+            par respecter ça -->
+            <h1>Techlab - Votre fournisseur de matériel informatique </h1>
 
             <!-- Possibilité d'une navigation horizontale, verticale, breadcrame, pagination... etc si c'est une navigation de plusieurs liens mais si c'est un seul lien 
                 on ne et pas de <nav> -->
@@ -51,9 +53,89 @@
 
     </header>
 
+    <!-- C'est pour que la navigation soit sur le côté -->
+    <aside>
+        <nav>
+            <a href="services.html">Services</a>
+            <a href="tarifs.html">Tarifs</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </aside>
 
-    <main></main>
-    <aside></aside>
+    <!-- Sachant q'il y a plusieurs interfaces et design possibles main est généralement purement décoratif et qui permet de se retrouver en terme de sémantique et 
+    à l'intérieur on peut avoir plusieurs <section> c'est le contenu principal qu'il faut sectionner en sections avec articles par exemple quand on a une liste 
+    d'article de blog ou quand on a cliqué sur un article aussi et à l'intérieur on refait la même présentation de <header> <footer> et des sections à l'intérieur
+    tel un article avec différents chapitres -->
+    <main>
+        <!-- Cette section propose par exemple un ensemble d'articles sur quoi on peut cliquer et on peut déjà utiliser la balise ou l'élément <article> -->
+        <section>
+            <h2>Listes d'articles de blog</h2>
+
+            <!-- C'est un élément indépendant dans notre site et dans cet article on pourrait ajouter des heading <h2> et à l'intérieur on peu répéter un mini 
+            sémantique avec un <header> et un <footer> et du <main> -->
+            <article>
+                <header>
+                    <h2>Nom de la carte graphique</h2>
+                    <img src="#" alt="...">
+                    <h3>Marque</h3>
+                    <h3>Prix</h3>
+                </header>
+
+                <main>
+                    <h2>Différences avec d'autres cartes graphiques </h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse sapiente corrupti sint error
+                        voluptates culpa, ullam reiciendis velit sit amet quos! Illo quasi facere odit, at perferendis
+                        mollitia dolorem dolore.</p>
+                </main>
+                <footer>
+                    <a href="#">Visiter le site</a>
+                </footer>
+            </article>
+
+            <article>
+                <header>
+                    <h2>Nom de la carte graphique</h2>
+                    <img src="#" alt="...">
+                    <h3>Marque</h3>
+                    <h3>Prix</h3>
+                </header>
+
+                <main>
+                    <h2>Différences avec d'autres cartes graphiques </h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse sapiente corrupti sint error
+                        voluptates culpa, ullam reiciendis velit sit amet quos! Illo quasi facere odit, at perferendis
+                        mollitia dolorem dolore.</p>
+                </main>
+                <footer>
+                    <a href="#">Visiter le site</a>
+                </footer>
+            </article>
+
+            <article>
+                <header>
+                    <h2>Nom de la carte graphique</h2>
+                    <img src="#" alt="...">
+                    <h3>Marque</h3>
+                    <h3>Prix</h3>
+                </header>
+
+                <main>
+                    <h2>Différences avec d'autres cartes graphiques </h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse sapiente corrupti sint error
+                        voluptates culpa, ullam reiciendis velit sit amet quos! Illo quasi facere odit, at perferendis
+                        mollitia dolorem dolore.</p>
+                </main>
+                <footer>
+                    <a href="#">Visiter le site</a>
+                </footer>
+            </article>
+        </section>
+
+        <section>
+            <h2></h2>
+        </section>
+
+    </main>
 
     <!-- ça peut être un <footer> simple tout en bas du site  avec "Tout droits réservé" avec un lien qui entour le texte et qui mène vers une page qui va servir à 
     présenter le créateur du site et quel service d'hébergement héberge le site et pour quelle entreprise ou service représente se site ...etc.  
