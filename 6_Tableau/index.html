@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construire un tableau</title>
+</head>
+
+<body>
+    <!-- On utilise les tableau pour montrer des données qu'on a des données tabulaires et on les utilise ce genre de chose quand se sont des données complexes qui sont
+        liées par des headings si ce sont de simples petits tableaux on les fait sans utiliser des <table> mais avec du HTML et CSS avec des Grid ou flexbox, mais 
+            dès que ça devient complexe et qu'on a données complexes tabulaires placées dans un tableau on utilise <table>
+        
+        
+         Pour créer un tableau on utilise plusieurs éléments importants tels que : <table> qui créé le tableau, <tr> pour (table row) qui va créer une rangé et 
+        à l'intérieur il va y avoir des <th> pour (table heading) ça va être les titres des catégories (colonnes) d'un tableau -->
+    <table>
+
+        <!-- Pour le rendre plus accessible par les lecteurs d'écran, on ajoutera d'autres éléments tels que : <thead> pour (table head) ça représente la tête du 
+        tablaau -->
+        <thead>
+            <tr>
+                <!-- Pour créer une colonne vide on fait comme ceci : -->
+                <th> &nbsp; </th>
+
+                <!-- A l'intérieur de chaque <th> on ajoute l'attribut scope="col" ce qui va définir les colonnes. Pour faire un petit décallage dans chacun de mes 
+                titres de colonnes, il y a un code HTML pour celà c'est le "&nbsp;" -->
+                <th scope="col"> &nbsp;Nom </th>
+                <th scope="col"> &nbsp;Job </th>
+                <th scope="col"> &nbsp;Contact </th>
+            </tr>
+        </thead>
+
+        <!-- Ensuite pour le contenu du tableau on ajoute le <tbody> qui va contenir les contenus des différentes rangés -->
+        <tbody>
+            <tr>
+                <!-- Ensuite on ajoute des <th> et à l'intérieur de chaque <th> on ajoute l'attribut scope="row" ce qui va définir les lignes -->
+                <th scope="row">User1</th>
+
+                <!-- Ensuite on créer une rangé où on va mettre des <td> pour (table data) qui vont contenir les informations (se sont le contenu des cellules) -->
+                <td>Aurélie</td>
+                <td>Fullstack</td>
+                <td>555-555-555</td>
+            </tr>
+ 
+            <tr>
+                <th scope="row">User2</th>
+
+                <td>John</td>
+                <td>Front End</td>
+                <td>444-444-444</td>
+            </tr>
+
+            <tr>
+                <th scope="row">User3</th>
+
+                <td>Valérie</td>
+                <td>Back End</td>
+                <td>777-777-777</td>
+            </tr>
+        </tbody>
+
+    </table>
+</body>
+
+</html>
