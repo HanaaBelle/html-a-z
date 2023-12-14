@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Eléments spéciaux (avancés)</title>
+
+    <style>
+        canvas {
+            background: thistle;
+            /*
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            */
+        }
+    </style>
+
 </head>
-<body>
+<body> 
+
+    <!-- L'élément Canvas signifie toile où on peut dessiner des formes et faire beaucoup de chose et des animations exeptionnelles juste avec des ronds et des 
+        traits, des rectangles et des carrés... etc pour celà on se crée un fichier JS et un fichier CSS pour le style -->
+    <canvas> </canvas>
+
 
     <!-- Details est un éléments HTML avec quoi on ajoute des détails comme un système d'onglet ou d'accordéon et avec l'attribut "open" ça permet de le garder 
         ouvert mais généralement on utilise JS et du CSS pour ce genre de chose et plus de fonctionnalités dans le genre  -->
@@ -18,6 +36,27 @@
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod illum reprehenderit tempore ea voluptatem praesentium, saepe nesciunt minima est facilis consequuntur dolorem! Reiciendis odit dicta possimus. Dicta unde laudantium eveniet commodi. Illum voluptas tenetur hic, praesentium a harum magnam ut nobis sit, numquam dignissimos facilis excepturi tempore dolorum omnis minima adipisci corrupti laudantium accusamus eum, repellendus modi eligendi! Odit quam praesentium velit debitis aliquam voluptates, id numquam ullam distinctio soluta voluptate. Ipsa rem exercitationem inventore enim nisi molestiae. Qui animi iste blanditiis assumenda aut, enim eius pariatur incidunt facilis, id vitae nesciunt dolorum esse quaerat laudantium laborum dicta hic fuga.
 
     </details>
+
+    <!-- Script pour dessiner avec le canvas-->
+    <script>
+        // Avant toute chose on va séléctionner le canvas grâce à sa balise <canvas> et on l'affecte à la constante "canvas":
+        const canvas = document.querySelector("canvas");
+
+        // Ensuite on utilise une méthode "getContext" qui utilise un contexte 2D qui nous donne accès à un ensemble de méthodes qui vont être appliquées sur
+        // "canvas" et on l'affecte à la constante "context_2D"
+        const context_2D = canvas.getContext("2d");
+
+        // Ensuite avec la méthode "fillStyle" on choisit la couleur qu'on veut dessiner un objet (un élément)
+        context_2D.fillStyle = "royalblue";
+
+        // Et avec la méthode "fillRect" on crée un rectangulaire à partir de x = 10 et y = 10 en commençant en haut à gauche du canvas puis on est aller jusqu'à 
+        // 50 sur 50 c'est possible de le mettre à "context_2D.fillRect(10,10,150,50);" celà nous fera un rectangle
+        context_2D.fillRect(10,10,150,50);  
+
+        // Voir codepen c'est un site où on peut voir des créations magnifiques avec des traits, des lignes, des points, des ronds, des carrés et des rectangles, 
+        // on peut aussi ajouter du texte à partir de là on peut tout faire le tout qu'on peut animer avec JS
+
+    </script>
     
 </body>
 </html>
