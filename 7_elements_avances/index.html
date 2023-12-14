@@ -15,13 +15,44 @@
             height: 100%;
             */
         }
+        svg{
+            background: rgb(65, 180, 225);
+        }
     </style>
 
 </head>
 <body> 
 
+    <!-- Les SVGs qui vont nous permettre de faire des dessins également mais directement en HTML en utilisant des balises qui vont même être référencées dans des 
+        éléments images qui vont entourées d'autres éléments comme des réctangles, des cercles, du textes... etc ça va être le cadre de notre SVG et il faudra lui 
+        donner un width et un heigth et on lui donne du style (sur la même page HTML) ça ressemble un peu au canvas mais le canvas on va l'animer exclusivement et 
+        dessiner dessus en JS par contre pour le SVG on va utiliser des éléments qui vont directement dessiner des choses en HTML et si on va faire des animation 
+        très avancées on peut utiliser du JS sinon c'est possible de dessiner dans un cadre SVG mais on ne code pas directement des SVGs on utilise des logiciels 
+        comme Figma, illustrator qui nous permettent de réaliser des SVGs à la vollet avec des courbes mathématiques c'est assez complexes avec bcp d'attributs avec
+        des lignes, des courbes -->
+
+    <svg width="300" height="200">
+
+        <!-- On peut aussi créer un autre élément cercle avec les position cx et cy et un rayon "r" -->
+        <circle cx="150" cy="100" r="80" fill="green"/>
+
+        <!-- On utilise une balise orpheline pour désigner un rectangle avec une largeur et une hauteur et une couleur avec l'attribut "fill" on peut aussi le 
+            déplacer en lui ajoutant une position x et y -->
+        <rect x="100" y="75" width="100" height="50" fill="tan"/>
+
+        <!-- Ici le texte "Coucou" est positionné à 20 pixels de gauche (x="20") et 30 pixels du haut (y="30") du SVG-->
+        <text x="150" y="110" fill="crimson" font-size="30" text-anchor="middle">SVG</text>
+
+    </svg>    
+
+    <!-- On peut référencé des SVGs dans une image (voir le site : https://www.flaticon.com) dans un élément img et l'avantag c'est que la
+    qaulité de l'image reste inchangée et on ne peut pas la déformer pcq ce sont des vecteurs mathématiques des calculs pour créer des 
+    courbes des ronds... etc qui vont s'adapter au zoom en avant ou en arrière (ce n'est pas zoomer sur des pixels) et donc ce sont plutôt 
+    des valeurs mathématiques qui vont créer toutes ces formes (le zoom augmene ou diminue ces valeurs) -->
+    <img src="ressources/icon.svg" alt="icon">
+
     <!-- L'élément Canvas signifie toile où on peut dessiner des formes et faire beaucoup de chose et des animations exeptionnelles juste avec des ronds et des 
-        traits, des rectangles et des carrés... etc pour celà on se crée un fichier JS et un fichier CSS pour le style -->
+        traits, des rectangles et des carrés... etc pour celà on se crée un fichier JS et un fichier CSS pour le style (ici c'est sur le même fichier HTML) -->
     <canvas> </canvas>
 
 
@@ -39,6 +70,7 @@
 
     <!-- Script pour dessiner avec le canvas-->
     <script>
+
         // Avant toute chose on va séléctionner le canvas grâce à sa balise <canvas> et on l'affecte à la constante "canvas":
         const canvas = document.querySelector("canvas");
 
