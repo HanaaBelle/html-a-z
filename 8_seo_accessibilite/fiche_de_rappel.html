@@ -1,0 +1,135 @@
+<!-- Un bon "!DOCTYPE" permet au navigateur qu'on a un HTML5 et ça lui permettera de bien analyser la page -->
+<!DOCTYPE html>
+
+<!-- ça permet de définir la langue ici c'est "fr" -->
+<html lang="fr">
+
+<head>
+
+    <!-- ça permet de définir l'encodageen "UTF-8" qui permet d'encoder énormément de caractères c'est pourquoi on l'utilise -->
+    <meta charset="UTF-8">
+
+    <!-- Un élément meta important pour le "responsive" qui permet de s'adapter à différents écrans et de tout le temps avir un zoom 100% (très important) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Un titre descriptif et unique (très important) -->
+    <title>SEO - Search Engin Optimisation</title>
+
+    <!-- Une bonne description de la page qui donne envie de la visiter et c'est ce qui va apparaitre dans les résultats, notamment de recherche -->
+    <meta name="description" content="SEO, accessibilité, position et optimisataion dans les moteurs de recherche">
+
+</head>
+<body>
+
+    <!-- SEO search engin optimisation ça sert à optimiser le positionnement de la page dans les moteurs de recherche (voir le site : 
+        https://web.dev/articles/vitals?hl=fr) et les "web vitals" qui traite de la performance des sites pour être mieux placés dans les moteurs de recherches :
+        -> LCP : la 1ère chose qui va apparaitre de notre site au chargement (une grande image, un grand texte...etc) et ça doit arriver dans un temps en dessous de 
+        2.5 secondes
+        -> FID : c'est l'interactivité ça doit être très interactif à moins de 100 millisecondes 
+        -> CLS : ça concerne la stabilité visuelle par exemple lors de la lecture d'un texte rien ne dérange ça (pas d'image qui s'affiche subitement des 
+        animations d'images qui altèrent la lecture.
+        La solution c'est de mettre des widths et des heights sur les images qu'on sait qui vont se charger et prendre un certain espace comme on peut leur donner 
+        des valeurs CSS pour éviter d'avoir du "lazy loading" ou ce genre de chose -->
+
+    <!-- Le respect des Headings du <h1> au <h6> et tout ça est lié à la sémantique -->
+    <h1>Hello</h1>
+    <h2>Hello</h2>
+    <h3>Hello</h3>
+    <h4>Hello</h4>
+    <h5>Hello</h5>
+    <h6>Hello</h6>
+
+    <!-- La sémantique -->
+    <header>
+
+        <!-- Les alts sont très importants pour l'accessibilité et il faut ajouter une description en utilisant une phrase pour décrire l'image si elle est 
+            importante -->
+        <img src="laptop.jpg" alt="Ordinateur portable ASUS ProArt Studiobook">
+
+        <!-- Mais si l'image n'est pas importante par exemple une image qui décore un bouton un lien avec image par exemple pour la navigation je voudrais ajouter 
+            des icons à mes liens on peut laisser la valeur de l'attribut "alt" : vide si c'est juste décoratif pour que le lecteur d'écran lise l'ancre et ne 
+            répète pas la même chose deux fois (home... home ou contact... contact) -->
+        <nav>
+
+            <!-- Les ancres des liens sont importants en terme d'accessibilité comme ici "Accueil" et "Contact" afin d'éviter les liens cassés-->
+            <a href="#">
+                <!-- Span permet de séparer les éléments et donc de les styliser -->
+                <span>Accueil</span> 
+                <img src="home.svg" alt="">
+            </a>
+            <a href="#">
+                <span>Contact</span>
+                <img src="contact.svg" alt="">
+            </a>
+
+            <!-- Parfois pour des liens il n'y a même pas du texte comme pour les lien des réseaux sociaux : instagram - facebook...etc, on juste une image on peut 
+                donc mettre un attribut "aria-label="Visiter la page Instagram"", (ce sont des attributs lié à l'accessibilté qu'il faudra évter d'utiliser sauf cas
+                extrème lorsqu'on a pas de texte dans un lien c'est utile d'ajouter un label pour labeliser notre lien qui sera lu par le lecteur d'écran) -->
+            <a href="#" aria-label="Visiter la page Instagram">
+                <img src="instagram.svg" alt="">
+            </a>
+        </nav>
+        <h1>Welcome</h1>
+    </header>
+
+    <main>
+        <section>
+            <article>
+                <header>
+                    <h2>
+                        <h3>
+
+                        </h3>
+                    </h2>
+                </header>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto reprehenderit, assumenda eos porro autem ipsam suscipit? Commodi temporibus cupiditate eum nesciunt. Porro tempora ut molestias quam beatae sunt sint rerum.
+                </p>
+                <footer>
+                    <details>
+                        <summary>
+                            <a href="http://..."></a>
+                        </summary>
+                    </details>
+                </footer>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <header>
+                    <h2>
+                        <h3>
+
+                        </h3>
+                    </h2>
+                </header>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto reprehenderit, assumenda eos porro autem ipsam suscipit? Commodi temporibus cupiditate eum nesciunt. Porro tempora ut molestias quam beatae sunt sint rerum.
+                </p>
+                <footer>
+                    <details>
+                        <summary>
+                            <a href="http://..."></a>
+                        </summary>
+                    </details>
+                </footer>
+            </article>
+        </section>
+    </main>
+
+    <aside>
+        <nav>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </nav>
+    </aside>
+
+    <footer>
+        <a href="http://..." >Copyright</a>
+        <a href="mailto:...@...com"></a>
+    </footer>
+    
+</body>
+</html>

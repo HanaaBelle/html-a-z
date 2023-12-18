@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les types de contenus en HTML</title>
+</head>
+<body>
+
+    <!-- c'est un concept un peu avancé et théorique : chaque élément va être regroupé dans une ou plusieurs catégorie -->
+
+    <!-- Notre "body" est une section "section de base" et très souvent dans une page web on a le "header" en haut et le "footer" en bas mais aussi dans un article 
+        c'est fréquent d'utiliser un "header" et un "footer" ou potentiellement dans une "section" ou dans une "nav" ou même dans une "aside" (c'est techniquement 
+        possible) -->
+
+    <!-- Flow content : c'est tous les éléments qu'on peut mettre dans le "body" et ça entoure tout sauf les metadata et ça englobe les contents suivants : -->
+
+    <!-- * Heading content : c'est tous les titres de h1 à h6 ça sert à définir les titres -->
+
+    <!-- * Sectionning content : ça sert à sectionner et créer un nouvel élément "section" dans une page mais aussi l'élément "nav" et "article" et "aside" mais pour 
+        les élément "header" et "footer" ils n'y sont pas parce qu'il servent à catégoriser une zone du contenu dans une section -->
+
+    <!-- * Phrasing content : c'est le contenu hors "headings" et tout ce qui peut être mis dans du texte comme les éléments inlines (span, image, bouton, label, 
+        video, input... etc) pouvant être ajouter à du texte et ça englobe les "embedded content" et tout ce qui est lié au contenu et au texte en général des 
+        éléments "inline" et le contenu du site en terme de texte d'image (du contenu) des boutons mais attention plusieurs éléments peuvent être inclus dans 
+        phrasing comme les "embedded elemnts" les "interactive elements" et même qu'on peut avoir un élément au même temps "embededd, interactive et phrasing" --> 
+
+    <!-- ** Embedded content : ce sont les élements qui servent à importer et à télécharger du contenu et qui peuvent être mis dans du texte mais tout en téléchargeant
+        l'"image" par exemple ou l'"iframe" ou encore les éléments "video" et "audio" etc... il faudra ajouter une source "src" et ils font partie du phrasing 
+        content -->      
+
+    <!-- ** Interactive content : ça va être les liens hypertextes les boutons et tous les éléments qui permettent à l'utilisateurs d'intéragir avec la page web :
+        (a, button, audio / video "ils sont des éléments embedded mais aussi des éléments interactive si l'attribut 'controls' est présent et bien sûr des éléments 
+        phrasing puisqu'ils font partie des  ", input... etc) et ils font partie du phrasing content (c-à-d du contenu du site) -->  
+        
+    <!-- * Catégories secondaires :
+        ** Palpable : un élément qui contient au moins un noeud visible (en JS) c'est quand on a du texte, un commentaire, un élément dans un éléments
+        ** Form-associated content : éléments associables aux formes (label, input, select, button)
+        ** Script supporting elements : (script) -->    
+
+    <!-- Les meta datas content : sont en dehors du flow vu qu'on le met dans le "head" sauf dans le cas de "phrasing content" qui est une manipulation spéciale 
+        lorsqu'on utilise un attribut spécial, les meta datas peuvent être comprises dans le flow mais en général c'est endehors du "body" et c'est tout ce qui se 
+        trouve dans le "head" et pas seulement les éléments metas comme le "meta title" -->
+
+    <!-- Site : "https://caninclude.glitch.me" permet de voir quel élément on peut mettre dans un autre élément -->
+    
+    <!-- Sites très importants pour la documentation officielle du HTML : 
+        Au début c'était par : "https://www.w3.org" , le W3C s'occupe maintenant du CSS, accessibilté, internationnalisation, web sécurité, privacy ...etc
+        Ensuite le développement du HTML est devenu celui de : "https://html.spec.whatwg.org/multipage/" 
+        Mais pour les débutants c'est : "https://developer.mozilla.org/fr/docs/Web/HTML" , par exemple : on tape dans le moteur de recherche "button html mdn" -->
+
+    
+</body>
+</html>

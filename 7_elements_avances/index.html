@@ -23,6 +23,15 @@
 </head>
 <body> 
 
+    <!-- Les iframes permettent d'imbriquer ou d'afficher un site dans un site (mais attention à des problèmes de sécurité) en référençant un autre fichier HTML 
+        comme valeur de l'attribut "src" et l'attribut "frameborder="0"" pour dire qu'on ne veut pas de bordure (si on l'enlève ça pertmet d'avoir un visuel) -->
+    <iframe src="../5_semantique_header_nav_footer/exercice/soupe_de_div.html"></iframe>
+
+    <!-- On peut aussi mettre à la place de "src="../5_semantique_header_nav_footer/exercice/soupe_de_div.html"" , "srcdoc=""" et on pourra directement mettre du 
+        code. Ce n'est pas très utilisé mais parfois on les trouve dans des blogs -->
+    <iframe srcdoc="<h1> Un site dans un site </h1>"></iframe>
+    
+
     <!-- Les SVGs qui vont nous permettre de faire des dessins également mais directement en HTML en utilisant des balises qui vont même être référencées dans des 
         éléments images qui vont entourées d'autres éléments comme des réctangles, des cercles, du textes... etc ça va être le cadre de notre SVG et il faudra lui 
         donner un width et un heigth et on lui donne du style (sur la même page HTML) ça ressemble un peu au canvas mais le canvas on va l'animer exclusivement et 
