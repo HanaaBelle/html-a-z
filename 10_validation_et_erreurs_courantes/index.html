@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation et erreurs courrantes</title>
+</head>
+<body>
+
+    <!-- Liste des erreurs courrantes et mauvaises pratiques : -->
+    
+    <!-- * Mettre un élément <div> à l'intérieur d'un élément <p> (avec leurs contenus), ça va créer notre <p> ensuite notre <div> ensuite un autre <p> qui sera 
+        vide (c-à-d juste une balise mais sans contenu) -->
+    <p>Lorem ipsum dolor sit amet.
+        <div>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis, et.
+        </div>
+    </p>    
+
+    <!-- * On peut avoir un élément <button> avec un élément <a> (lien) à l'intérieur : c'est tout simplement une mauvaise pratique en terme d'accessibilité, un 
+        lien ça sert à aller quelque part et un bouton ça sert à faire une action donc c'est soit l'un soit l'autre pas les deux au même temps -->  
+    <button>
+        <a href="#">Clique Ici</a>
+    </button>
+
+    <!-- * On peut aussi avoir un lien dans un lien (un élément <a> à l'intérieur d'un élément <a>) c'est une très mauvaise pratique et le rendu c'est un 
+        dédoubelement de lien ça ne va pas les mettre les un sur les autres car c'est une question d'attribut "href" et ne pas savoir ou aller -->
+        <a href="#">
+            Lien1
+            <a href="#">
+                Lien2
+            </a>
+        </a>
+
+    <!-- * On peut avoir aussi un titre entouré d'un lien (un élément titre <h1> à l'intérieur d'un élément lien <a>) et même si c'est possible c'est important de 
+        respecter l'ordre des éléments "bloc" (<h1>) et "inline" (<a>) ce qui se passe c'est que le titre sert à définir des parges en générale et ici il va prendre
+        tout l'espace en bloc donc tout cet espace devient cliquable ce qui n'est pas correct pour une experience utilisateur (UI & UX) -->
+    <a href="#">
+        <h1>Lorem, ipsum.</h1>
+    </a>
+    
+    <!-- Donc l'inverse est plus logique et correcte -->
+    <h1>
+        <a href="#">Lien vers ma page</a>
+    </h1>
+
+    <!-- * On peut avoir aussi un élément <textarea> avec du texte mais il ne faut pas mettre un autre élément HTML à l'intérieur par exemple ici un lien <a> parce 
+        que ça le rend juste comme du texte -->
+    <textarea name="" id="" cols="30" rows="10">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt molestias porro labore id praesentium beatae libero eum voluptatibus dicta est?
+        <a href="#">Lien</a>
+    </textarea>    
+
+    <!-- Dans un élément liste <ol> ou <ul> il faut toujours mettre à l'intérieur des éléments de liste <li> jamais d'élément <p> ou <div> car ça va buguer et la 
+        liste ne s'affichera pas et donc se n'est pas correcte -->
+    <ol>
+        <div>lorem1</div>
+        <div>lorem2</div>
+        <p>lorem3</p>
+        <p>lorem4</p>
+    </ol>
+    
+</body>
+</html> 
