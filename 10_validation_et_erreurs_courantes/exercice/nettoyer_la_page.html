@@ -1,0 +1,193 @@
+<!DOCTYPE html> <!-- Correct -->
+<html lang="fr"> <!-- Correct -->
+
+<head>
+  <meta charset="UTF-8" /> <!-- Correct -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Correct -->
+
+  <meta name="description" content="TechLab - le meilleur choix de matériel informatique en France. De la carte graphique à la barette de RAM, 
+                                    on a tout ce qu'il vous faut."> <!-- Oublié mais corrigé -->
+
+  <title>TechLab, le premier distributeur de matériel informatique en France.</title> <!-- Correct -->
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header id="accueil"> <!-- Correct mais le id="accueil" oublié -->
+
+    <nav> <!-- Correct -->
+      <ul>
+        <li>
+          <a href="#accueil">Accueil</a> <!-- Correct mais en mettant accueil au lieu de home-->
+        </li>
+        <li>
+          <a href="#produits">Produits</a> <!-- Correct -->
+        </li>
+        <li>
+          <a href="#services">Services</a> <!-- Correct -->
+        </li>
+        <li>
+          <a href="#contact">Contact</a> <!-- Correct -->
+        </li>
+      </ul>
+    </nav>
+
+    <h1> Bienvenue sur TechLab.com, le premier distributeur de matériel informatique en France. </h1> <!-- Correct -->
+
+    <a href="contact.html">Contact</a> <!-- Pas correct un lien vers la page Contact au lieu d'un bouton -->
+
+    <a href="services.html">Services</a> <!-- Pas correct un lien vers la page Services au lieu d'un bouton -->
+
+  </header>
+
+  <main> <!-- Correct -->
+
+    <section id="produits"> <!-- Correct -->
+
+      <header>
+        <h2>Nos différents produits</h2> <!-- Correct -->
+      </header>
+
+      <article>
+
+        <header>
+          <h3>Carte mère : MSI MAG B550 TOMAHAWK</h3> <!-- Correct -->
+        </header>
+
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro
+          adipisci ut laborum itaque, tenetur hic.
+        </p>
+
+        <footer>
+          <a href="http://carte_mere.html">Caractéristiques</a> <!-- Pas correct un lien vers une page avec plus d'infos sur la carte mère-->
+        </footer>
+
+      </article>
+
+      <article>
+
+        <header>
+          <h3>RAM : Corsair Vengeance LPX Black DDR4 2 x 16 Go 3200 MHz CAS 16</h3> <!-- Correct -->
+        </header>
+
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro
+          adipisci ut laborum itaque, tenetur hic.
+        </p>
+
+        <footer>
+          <a href="http://ram.html">Caractéristiques</a> <!-- Pas correct un lien vers une page avec plus d'infos sur la RAM -->
+        </footer>
+
+      </article>
+
+      <article>
+
+        <header>
+          <h3>Carte graphique : Gigabyte GeForce RTX 3090 XTREME 24G</h3> <!-- Correct -->
+        </header>
+
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro
+          adipisci ut laborum itaque, tenetur hic.
+        </p>
+
+        <footer>
+          <a href="http://carte_graphique.html">Caractéristiques</a> <!-- Pas correct un lien vers une page avec plus d'infos sur la carte graphique -->
+        </footer>
+
+      </article>
+
+    </section>
+
+    <section id="services"> <!-- Correct -->
+
+      <header>
+        <h2>Nos services</h2> <!-- Correct -->
+      </header>
+
+      <ul> <!-- Correct comme on peut laisser les div -->
+        <li>
+
+          <h3>Réparation d'ordinateur</h3> <!-- Correct -->
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            magni, modi assumenda at laborum praesentium facilis inventore facere
+            a dolorem.
+          </p>
+
+          <img src="laptop.jpg" alt="Réparation d'un laptop" /> <!-- Correct -->
+
+        </li>
+
+        <li>
+
+          <h3>Reprise de matériel d'occasion</h3> <!-- Correct -->
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia totam
+            molestias ullam, porro ut nam.
+          </p>
+
+          <img src="money.jpg" alt="Photo d'argent'" /> <!-- Correct -->
+
+        </li>
+
+      </ul>
+
+    </section>
+
+    <section id="contact"> <!-- Correct -->
+
+      <header>
+        <h2>Une question ? Contactez-nous !</h2> <!-- Correct -->
+      </header>
+
+      <form>
+
+        <label for="name">Votre nom</label> <!-- Correct mais il fallait le mettre en 1er -->
+        <input type="text" name="name" id="name" required placeholder="Entrez votre nom"> <!-- Correct -->
+
+        <label for="email">Votre mail</label> <!-- Correct -->
+        <input type="email" name="email" id="email" required placeholder="Entrez votre email"> <!-- Correct -->
+
+        <label for="password">Votre mot de passe</label> <!-- Correct -->
+        <input type="password" name="password" id="password" required placeholder="Entrez votre mot de passe"> <!-- Correct -->
+
+        <label for="message" name="message">Votre message</label> <!-- Correct -->
+        <textarea name="message" id="message"></textarea> <!-- Correct -->
+
+        <button type="submit"> <!-- Correct -->
+
+          <span>Submit</span>
+
+          <!-- Ici on aurait pu mettre un élément <img> qui référence un fichier "svg" mais ça prend du temps pour le télécharger depuis notre serveur à
+            partir de notre dossier (téléchargement provoqué par l'image) par contre mettre directement un élément <svg> (en tant que contenu HTML) ça se
+            chargera directement avec la page web HTML (dans le cas d'icon en SVG ça pourrait être plus pratique de le faire mais en terme de 
+            maintenabilité c'est un peut plus compliqué surtout si ce sont de gros "SVG" donc à voir !!!) -->
+          <svg width="50" height="25" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <g id="Paper_Plane" data-name="Paper Plane">
+              <path
+                d="m63.61 5.21a1.0038 1.0038 0 0 0 -.95-.15l-61.9 14.97a1.0064 1.0064 0 0 0 -.74.76.9893.9893 0 0 0 .36.99l14.07 11.16-.45 25.04a1.0011 1.0011 0 0 0 1.68.75l13.76-12.88 9.85 9.86a1.0014 1.0014 0 0 0 1.62-.29l23-49a1.009 1.009 0 0 0 -.3-1.21zm-60.38 16.28 52.87-12.79-40.54 22.56zm13.22 11.57 37.43-20.84-30.98 25.54a.9345.9345 0 0 0 -.28.37l-6.53 14.89zm1.42 20.88 5.99-13.66 4.16 4.15zm21.83-.65-14.68-14.68 35.19-29.01z" />
+            </g>
+          </svg>
+
+        </button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <footer> <!-- Correct mais le lien vers les mentions légales oublié (qui a créer le site et où il est hébergé et pour quelle  entreprise) -->
+    <a href="http://mentions_legales.html">Tous droits réservés </a>
+  </footer>
+
+</body>
+
+</html>
