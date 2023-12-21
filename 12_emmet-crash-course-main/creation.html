@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emmet Crash Course</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- "emmet" expand on tab dans les settings : une extension tellement populaire que c'est intégrée directement dans VS Code c'est
+      très pratique de coder du contenu HTML et même il y a quelques astuces CSS -->
+ 
+    <!-- Voir quelques raccourcis "Emmet" importants qui permettent de créer du contenu sur VS Code-->
+
+    <!-- Class . : [.box + tab|enter] ou [div.box + tab|enter] -->
+    <!-- Pour créer un élément <div> avec (class="classe") faire : ".classe" ou "div.classe" pareil pour les autres éléments : 
+      ("p.classe", "section.classe", ... etc) -->
+    <div class="classe"></div>
+    <p class="classe"></p>
+    <section class="classe"></section>
+ 
+
+    <!-- On peut aussi ajouter plusieurs classes à un élément par exemple avec "article.c1.c2.c3" ou aussi avec :
+      "".article.c1.c2.c3" -->
+    <article class="c1 c2 c3"></article>
+
+
+    <!-- Pour créer un élément <div> avec plusieurs classes on peut mettre juste ".c1.c2.c3"  -->
+    <div class="c1 c2 c3"></div>
+
+
+     <!-- ID # : [#box + tab|enter] ou [div#box + tab|enter] -->
+    <!-- Pour créer un élément <div> avec (id="bloc") faire : "#nom" ou "div#bloc" pareil pour les autres éléments : 
+      ("p#paragraph", "section#section", ... etc) -->
+      <div id="bloc"></div>
+      <p id="paragraph"></p>
+      <section id="section"></section>
+
+
+    <!-- C'est possible aussi de créer un élément avec attribut "id" et attribut "classe" avec : "section#id.classe"-->
+    <section id="id" class="classe"></section>
+
+
+    <!-- Ou un élément <div> avec attribut "id" et une "classe" : "#id.classe" -->
+      <div id="id" class="classe"></div>
+
+
+    <!-- Multiplication : [.box*7 + tab|enter] -->
+    <!-- Pour créer sept (7) éléments <div> avec (classe="box") faire : ".box*7" pareil pour les autres éléments :
+     ("p.paragraph*4", "section.section*5", ... etc)-->
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <p class="paragraph"></p>
+    <p class="paragraph"></p>
+    <p class="paragraph"></p>
+    <p class="paragraph"></p>
+
+    <section class="section"></section>
+    <section class="section"></section>
+    <section class="section"></section>
+    <section class="section"></section>
+    <section class="section"></section>
+
+
+    <!-- On peut aussi en utilisant l'index créer une incrémentation de classe de 1 à 4 pour plusieurs éléments <div>  avec : 
+      ".bloc-$*4" et aussi pour d'autres éléments comme par exemple : "article.article-$*3" ou section.section-$*4 -->
+    <div class="bloc-1"></div>
+    <div class="bloc-2"></div>
+    <div class="bloc-3"></div>
+    <div class="bloc-4"></div>
+
+    <article class="article-1"></article>
+    <article class="article-2"></article>
+    <article class="article-3"></article>
+
+
+    <!-- Ajouter du contenu {} : [h1{Salut tout le monde} + tab|enter] -->
+     <!-- Pour créer un titre <h1> ou autre sept (7) éléments <div> avec (classe="box") faire : h1{Coucou} -->
+    <h1>Coucou</h1>
+
+
+    <!-- Utilisez l'index [h1{$}*6 + tab|enter] pour afficher une incrémentation de 1 à 7 du contenu de chaque <h1> avec : 
+      "h1{$}*7" pareil pour les autres éléments  <p>, <section> ... etc -->
+    <h1>1</h1>
+    <h1>2</h1>
+    <h1>3</h1>
+    <h1>4</h1>
+    <h1>5</h1>
+    <h1>6</h1>
+    <h1>7</h1>
+
+
+    <!-- C'est possible de créer des éléments <h3> avec des "id" différents à chaque fois grâce à l'incrémentation de leur index avec "$"
+      comme ceci : h3#titre_3-$*4 ou encore pour d'autres éléments et c'est possible de le faire avec des éléments <di> comme ceci :
+      "#box-$*5" -->
+    <h3 id="titre_3-1"></h3>
+    <h3 id="titre_3-2"></h3>
+    <h3 id="titre_3-3"></h3>
+    <h3 id="titre_3-4"></h3>
+
+    <div id="box-1"></div>
+    <div id="box-2"></div>
+    <div id="box-3"></div>
+    <div id="box-4"></div>
+    <div id="box-5"></div>
+
+
+    <!-- C'est possible aussi de créer des éléments <div> avec la classe et une incrémentation de leur contenu comme utilisation 
+      d'index avec : .box{$}*4 ou encore pour d'autres éléments avec : article.box{$}*3 -->
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+
+    <article class="article">1</article>
+    <article class="article">2</article>
+    <article class="article">3</article>
+
+
+    <!-- Encore plus intéressant c'est d'utiliser l'index "$" dans les classes [p.txt-${$}*6 + tab|enter] ou encore " h2.titre_2-$*4"
+      pour afficher une incrémentation des index des classes -->
+    <p class="txt-1">1</p>
+    <p class="txt-2">2</p>
+    <p class="txt-3">3</p>
+    <p class="txt-4">4</p>
+    <p class="txt-5">5</p>
+    <p class="txt-6">6</p>
+
+    <h2 class="titre_2-1"></h2>
+    <h2 class="titre_2-2"></h2>
+    <h2 class="titre_2-3"></h2>
+    <h2 class="titre_2-4"></h2>
+
+
+    <!-- Ou encore pour l'éélemnt <div> avec : .bloc-${$}*5 -->
+    <div class="bloc-1">1</div>
+    <div class="bloc-2">2</div>
+    <div class="bloc-3">3</div>
+    <div class="bloc-4">4</div>
+    <div class="bloc-5">5</div>
+
+
+    <!-- On peut aussi différencier plusieurs noms de classe comme par exemple : "h3.titre.titre_3-$*4" ou encore pour créer des 
+      élemnts <div> avec plusieurs classes associées avec : ".box_container.box_image-$*4" -->
+    <h3 class="titre titre_3-1"></h3>
+    <h3 class="titre titre_3-2"></h3>
+    <h3 class="titre titre_3-3"></h3>
+    <h3 class="titre titre_3-4"></h3>
+
+    <div class="box_container box_image-1"></div>
+    <div class="box_container box_image-2"></div>
+    <div class="box_container box_image-3"></div>
+    <div class="box_container box_image-4"></div>
+
+
+    <!-- Imbrication > : [.parent>.child + tab|enter] très intéressant pour créer une imbrication entre des éléments <div> -->
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+
+    
+    <!-- Ou encore pour d'autres éléments comme avec l'incérementation en utilisant l'index "$" avec par exemple : 
+      "section.parent>article.child*4" -->
+    <section class="parent">
+      <article class="child"></article>
+      <article class="child"></article>
+      <article class="child"></article>
+      <article class="child"></article>
+    </section>
+
+
+     <!-- C'est possible aussi de faire la même chose mais avec des "id" pas seulement avec des classes qui incéremente leurs index 
+      pour qu'à chaque création d'élément l'id soit différent par exemple : "section.parent>article#child-$*4" -->
+    <section class="parent">
+      <article id="child-1"></article>
+      <article id="child-2"></article>
+      <article id="child-3"></article>
+      <article id="child-4"></article>
+    </section>
+
+
+    <!-- Imbrication complexe : [.container>ul.list>li.item*6 + tab|enter] pour créer plusieurs éléments d'une liste non ordonnées -->
+    <div class="container">
+      <ul class="list">
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+      </ul>
+    </div>
+
+
+    <!-- Ou encore avec une liste ordonnées en incrémentant l'index des classes : ".container>ul.list>li.item-$*6" -->
+    <div class="container">
+      <ol class="list">
+        <li class="item-1"></li>
+        <li class="item-2"></li>
+        <li class="item-3"></li>
+        <li class="item-4"></li>
+        <li class="item-5"></li>
+        <li class="item-6"></li>
+      </ol>
+    </div>
+
+
+     <!-- Ou encore avec une liste ordonnées en incrémentant l'index des 'ids' pour qu'ils soient différents à chaque création d'un 
+      nouvel éléments -->
+    <div class="container">
+      <ol class="list">
+        <li id="item-1"></li>
+        <li id="item-2"></li>
+        <li id="item-3"></li>
+        <li id="item-4"></li>
+      </ol>
+    </div>
+
+    <!-- Ou encore en ajoutant du contenu à chaque élément de la liste en utilisant l'index incrémenté "$" comme cesi : 
+    .contenu>ul.liste>li#id-${$}*10 -->
+    <div class="contenu">
+      <ul class="liste">
+        <li id="id-1">1</li>
+        <li id="id-2">2</li>
+        <li id="id-3">3</li>
+        <li id="id-4">4</li>
+        <li id="id-5">5</li>
+        <li id="id-6">6</li>
+        <li id="id-7">7</li>
+        <li id="id-8">8</li>
+        <li id="id-9">9</li>
+        <li id="id-10">10</li>
+      </ul>
+    </div>
+
+
+    <!-- Même niveau + : [.box1+.box2 + tab|enter] , si on souhaite ajouter ou créer des éléments <div> dans le même niveau il suffit 
+    de faire : .box1+.box2 ou encore avec d'autres éléments comme <article> ou <p> comme ceci : 
+    article.article_1+article.article_2+article.article_3-->
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <article class="article_1"></article>
+    <article class="article_2"></article>
+    <article class="article_3"></article>
+
+
+    <!-- Remonter d'un niveau ^ : [.container>.child^.container2 + tab|enter] , si on souhaite ajouter ou créer des éléments <div> 
+    puis remonter d'un niveau pour créer à nouveau d'autres éléments à ce niveau là il suffit de faire : 
+    .container_1>.child_1^.container_2>.child_2 ou encore avec d'autres éléments comme <selection> et <article> comme ceci : 
+    selection.selection_1>article.article_1+article.article_2+article.article_3^selection.selection_2>article.article_4 -->
+    <div class="container_1">
+      <div class="child_1"></div>
+    </div>
+    <div class="container_2">
+      <div class="child_2"></div>
+    </div>
+
+    <selection class="selection_1">
+      <article class="article_1"></article>
+      <article class="article_2"></article>
+      <article class="article_3"></article>
+    </selection>
+    <selection class="selection_2">
+      <article class="article_4"></article>
+    </selection>
+
+
+    <!-- Utiliser les groupes () : [.container>(ul>li*6)^p + tab|enter] , gestion de groupe qui est très intéressant et pratique
+    lorsqu'on ajouter plusieurs éléments ensemble comme ceci :.container>(ul.list>li#item-$*6)^p.text{commentaires}*3 -->
+    <div class="container">
+      <ul class="list">
+        <li id="item-1"></li>
+        <li id="item-2"></li>
+        <li id="item-3"></li>
+        <li id="item-4"></li>
+        <li id="item-5"></li>
+        <li id="item-6"></li>
+      </ul>
+    </div>
+    <p class="text">commentaires</p>
+    <p class="text">commentaires</p>
+    <p class="text">commentaires</p>
+
+
+    <!-- Doctype [! + tab|enter] pour créer un fichier HTML 
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+    </head>
+    <body>
+      
+    </body>
+    </html>
+
+    -->
+
+
+    <!-- Aussi tous les éléments peuvent être écrits avec leur nom : [element + tab|enter] -->
+    <form action=""></form>
+    <input type="text">
+    <section></section>
+    
+  </body>
+</html>
